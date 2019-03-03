@@ -1,0 +1,6 @@
+---
+
+- hosts: testservers
+  roles:
+    - { role: copyfiles, file_list: [ 'file5.txt', 'file6.txt' ] }
+

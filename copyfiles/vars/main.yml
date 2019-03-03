@@ -1,0 +1,4 @@
+---
+# vars file for copyfiles
+# file_list: [ 'file7.txt', 'file8.txt' ]
+

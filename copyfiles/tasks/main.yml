@@ -1,0 +1,9 @@
+---
+# tasks file for copyfiles
+
+- name: Copy Files To Hosts
+  copy:
+    src: "{{ item }}"
+    dest: /tmp/ansible/
+  with_items: "{{ file_list }}"
+
