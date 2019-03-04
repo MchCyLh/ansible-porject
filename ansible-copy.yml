@@ -1,0 +1,4 @@
+---
+- hosts: testservers
+  roles:
+  - { role: ansible-copy, src: file1.txt, dest: /tmp }

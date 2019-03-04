@@ -1,0 +1,4 @@
+---
+# defaults file for copyfiles
+file_list: []
+dest_path: /tmp/ansible/

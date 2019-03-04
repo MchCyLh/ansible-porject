@@ -1,6 +1,5 @@
 ---
-
 - hosts: testservers
+  vars_files: global_vars/copyfiles_vars
   roles:
-    - { role: copyfiles, file_list: [ 'file5.txt', 'file6.txt' ] }
-
+    - { role: copyfiles }

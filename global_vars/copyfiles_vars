@@ -1,0 +1,2 @@
+file_list: [ 'file1.txt' ]
+dest_path: /tmp/ansible
