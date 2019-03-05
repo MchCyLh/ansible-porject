@@ -1,0 +1,4 @@
+---
+- hosts: testservers
+  roles:
+  - { role: ansible-shell, cmd: cat /etc/centos- }

@@ -26,16 +26,18 @@ while getopts s:h:d: opt; do
 			;;
 	esac
 done
-[ ! $src ] || [ ! $hosts ] || [ ! $dest ] && Usage && exit
+[ ! "$src" ] || [ ! "$hosts" ] || [ ! "$dest" ] && Usage && exit
 
-ap_path=$AP
-cat > $ap_path/ansible-copy.yml << EOF
----
-- hosts: $hosts
-  roles:
-  - { role: ansible-copy, src: $src, dest: $dest }
-EOF
+#ap_path=$AP
+#cat > $ap_path/ansible-copy.yml << EOF
+#---
+#- hosts: $hosts
+#  roles:
+#  - { role: ansible-copy, src: $src, dest: $dest }
+#EOF
+#
+#
+#cd $ap_path && ansible-playbook ansible-copy.yml
 
-
-cd $ap_path && ansible-playbook ansible-copy.yml
+ansible $hosts -m copy -a "src=$src dest=$dest"
 

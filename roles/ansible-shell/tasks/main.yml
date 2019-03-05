@@ -1,0 +1,4 @@
+---
+# tasks file for ansible-shell
+- name: Execute shell commands on targets
+  shell: "{{ cmd }}"
